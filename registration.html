@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Registration Form</title>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+    body {
+      background: url(https://cdn.glitch.global/265d6483-bf0e-450a-a2b4-da68989b2203/bg2.png?v=1682859705197) no-repeat;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .hem {
+      background-color: #eb99ff;
+      width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #944dff;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #686868;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    ion-icon {
+      margin-right: 10px;
+      font-size: 20px;
+      color: #000000;
+    }
+
+    button {
+      width: 40%;
+      padding: 10px;
+      border: 0;
+      border-radius: 5px;
+      background-color: #a7ed4c;
+      color: #000000;
+      cursor: pointer;
+      align-items: center;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="hem">
+    <form method="post" id="registrationForm" action="/submit">
+      <h2>Registration Form</h2>
+      <label for="name">
+        <ion-icon name="person-outline"></ion-icon>
+        User Name:
+      </label>
+      <input type="text" id="name" name="name" placeholder="Enter your Name" required />
+      
+      <label for="email">
+        <ion-icon name="mail-outline"></ion-icon>
+        Email:
+      </label>
+      <input type="email" id="email" name="email" placeholder="name@gmail.com" required />
+      
+      <label for="password">
+        <ion-icon name="finger-print-outline"></ion-icon>
+        Password:
+      </label>
+      <input type="password" id="password" name="password" placeholder="Enter your Password" required />
+      
+      <label for="dob">
+        <ion-icon name="calendar-outline"></ion-icon>
+        Date of Birth:
+      </label>
+      <input type="date" id="dob" name="dob" required />
+      
+      <input type="checkbox" id="acceptTerms" name="acceptTerms" required  />
+      <label for="acceptTerms" style="margin-left: 60px;">Accept Terms and Conditions</label>
+      
+      <button type="submit" style="margin-left: 100px" >Submit</button>
+    </form>
+  </div>
+</body>
+</html>
